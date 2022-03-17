@@ -98,27 +98,24 @@
 
     <div class="container">
         <div class="row">
+            <!-- View Posted Reviews Section -->
             <div class="col-md-8 card mb-4  mt-3 ">
-                <h3>Reviews:</h3>
+                <h3>Products Reviews:</h3>
                 <div class="card-body">
-                    <!-- We want a for loop inside the empty control tags to iterate through each review in reviews -->
                     {% for review in reviews %}
                     <div class="reviews" style="padding: 10px;">
                         <p class="font-weight-bold">
-                            <!-- The reviewers's name goes here. Check the model if you're not sure what that is -->
                             {{ review.name }}
                             <span class=" text-muted font-weight-normal">
-                                <!-- The reviews created date goes here -->
                                 {{ review.created_on }}
-                            </span>
+                            </span>wrote:
                         </p>
-                        <!-- The body of the review goes before the | -->
-                        <p class="review-message">{{ review.message }}</p>
+                        <p>{{ review.comment | linebreaks }}</p>
                     </div>
-                    <!-- Our for loop ends here -->
                     {% endfor %}
                 </div>
             </div>
+            <!-- Leave a Review Section -->
             <div class="col-md-4 card mb-4  mt-3 ">
                 <div class="card-body">
                     {% if reviewed %}
@@ -129,11 +126,16 @@
                     {% if user.is_authenticated %}
                     <h3>Leave a review:</h3>
                     <p>Posting as: {{ user.username }}</p>
-                    <form method="POST" style="margin-top: 1.3em;" action="">
+                    <form method="POST" style="margin-top: 1.3em;">
                         {{ review_form | crispy }}
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                        <button type="submit" class="btn">Submit &raquo;</button>
                     </form>
+                    {% else %}
+                        <div>
+                            <a href="{% url 'account_signup' %}">Create an account</a> or
+                            <a href="{% url 'account_login' %}">login</a> to comment on this post.
+                        </div>
                     {% endif %}
                     {% endif %}
                 </div>

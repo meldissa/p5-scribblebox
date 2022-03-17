@@ -36,7 +36,7 @@ class Review(models.Model):
                              related_name="reviews")
     name = models.CharField(max_length=80)
     email = models.EmailField()
-    message = models.TextField()
+    comment = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
@@ -44,4 +44,4 @@ class Review(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"{self.name} {self.message} {self.product}"
+        return f"Comment {self.comment} by {self.name}"

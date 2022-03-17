@@ -65,8 +65,8 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    reviews = Review.objects.all().filter(product__name=product)
-    review_form = ReviewForm()
+    reviews = product.reviews.filter(approved=True).order_by("-created_on")
+    form = ReviewForm()
 
     if request.user.is_authenticated:
         username = User.objects.get(username=request.user)
@@ -76,14 +76,14 @@ def product_detail(request, product_id):
     if request.method == 'POST' and request.user.is_authenticated:
         name = request.POST.get('name', username)
         email = request.POST.get('email', '')
-        message = request.POST.get('message', '')
+        comment = request.POST.get('comment', '')
         review = Review.objects.create(product=product, name=name,
-                                       email=email, message=message)
+                                       email=email, comment=comment)
 
     context = {
         'product': product,
         'reviews': reviews,
-        'review_form': review_form
+        'review_form': form
     }
 
     return render(request, 'products/product_detail.html', context)

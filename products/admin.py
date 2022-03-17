@@ -3,6 +3,7 @@ from .models import Product, Category, Review
 
 # Register your models here.
 
+@admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -16,6 +17,7 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ('sku',)
 
 
+@admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
@@ -23,17 +25,17 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
+@admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
     list_display = (
         'product',
         'name',
         'email',
-        'message',
+        'comment',
         'created_on',
         'approved',
     )
+    actions = ['approve_comments']
 
-
-admin.site.register(Review, ReviewAdmin)
-admin.site.register(Product, ProductAdmin)
-admin.site.register(Category, CategoryAdmin)
+    def approve_comments(self, request, queryset):
+        queryset.update(approved=True)
