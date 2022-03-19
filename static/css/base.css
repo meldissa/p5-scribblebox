@@ -165,6 +165,12 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/* -------------------------------- Mailchimp */
+
+#mc_embed_signup {
+    padding: 0;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
