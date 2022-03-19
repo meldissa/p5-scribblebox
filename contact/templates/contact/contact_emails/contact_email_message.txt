@@ -1,0 +1,12 @@
+Dear Admin,
+
+You have received an email query from a customer.
+
+From: {{ email }}
+
+Message: {{ message }}
+
+
+Sincerely,
+
+ScribbleBox
