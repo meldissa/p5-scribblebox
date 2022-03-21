@@ -1,0 +1,115 @@
+/* Blog Posts Section */
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: rgb(214, 170, 255);
+}
+
+.author {
+    color: black;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+.post-link {
+    text-decoration: none;
+    color: black;
+}
+
+.post-link:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.page-link {
+    color: #fff;
+    background-color: #212529;
+    border: solid 1px rgb(214, 170, 255);
+}
+
+.page-link:hover {
+    color: rgb(214, 170, 255);
+    background-color: #212529;
+}
+
+.post-title {
+    margin-top: 20%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: lightgray;
+}
+
+/* Post Detail Section */
+
+.masthead {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .masthead {
+        height: 400px;
+    }
+}
+
+.masthead-text {
+    background-color: #212529;
+    color: white;
+    position: relative;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.masthead-image > img {
+    width: 100%;
+}
+
+.link {
+    color: rgb(214, 170, 255);
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: rgb(214, 170, 255);
+    text-decoration: underline;
+}
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
+} 
+
+.btn-comment {
+    margin-top: 5px;
+}
