@@ -30,3 +30,5 @@ urlpatterns = [
     path('events/', include('events.urls')),
     path('summernote/', include('django_summernote.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = "scribblebox.views.page_not_found_view"
