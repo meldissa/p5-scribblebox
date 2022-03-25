@@ -25,6 +25,12 @@
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="col-md-4 masthead-image">
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_post' post.slug %}">Edit</a> | 
+                    <a class="text-danger" href="{% url 'delete_post' post.slug %}">Delete</a>
+                </small>
+                {% endif %}
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="" alt="">
                 {% else %}
