@@ -74,11 +74,11 @@ def add_post(request):
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES)
+        form = PostForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added post!')
-            return redirect(reverse('posts', args=[slug]))
+            return redirect('posts')
         else:
             messages.error(request, 'Failed to add post. Please ensure the form is valid.')
     else:
