@@ -3,6 +3,7 @@ from .models import Product, Category, Review
 
 # Register your models here.
 
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
@@ -30,7 +31,6 @@ class ReviewAdmin(admin.ModelAdmin):
     list_display = (
         'product',
         'name',
-        'email',
         'comment',
         'created_on',
         'approved',

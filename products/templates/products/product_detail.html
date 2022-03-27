@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -118,11 +119,6 @@
             <!-- Leave a Review Section -->
             <div class="col-md-4 card mb-4  mt-3 ">
                 <div class="card-body">
-                    {% if reviewed %}
-                    <div class="alert alert-success" role="alert">
-                        Your review is awaiting approval
-                    </div>
-                    {% else %}
                     {% if user.is_authenticated %}
                     <h3>Leave a review:</h3>
                     <p>Posting as: {{ user.username }}</p>
@@ -136,7 +132,6 @@
                             <a href="{% url 'account_signup' %}">Create an account</a> or
                             <a href="{% url 'account_login' %}">login</a> to comment on this post.
                         </div>
-                    {% endif %}
                     {% endif %}
                 </div>
             </div>
