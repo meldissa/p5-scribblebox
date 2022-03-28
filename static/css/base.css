@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    font-family: "Lato", sans-serif;
 }
 
 /* from Bulma */
@@ -19,12 +19,21 @@ body {
     width: 1.5rem;
 }
 
+#main-logo {
+    font-family: "Lobster", sans-serif;
+    letter-spacing: 3px;
+}
+
 .logo-font {
     text-transform: uppercase;
 }
 
 .main-logo-link {
     width: fit-content;
+}
+
+#delivery-banner {
+    background-color: rgb(204, 174, 188);
 }
 
 .shop-now-button {
