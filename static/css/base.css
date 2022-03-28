@@ -176,8 +176,18 @@ input[name='q']::placeholder {
 
 /* -------------------------------- Mailchimp */
 
-#mc_embed_signup {
+#mc_embed_signup form {
     padding: 0;
+}
+
+/* -------------------------------- Footer */
+
+.main-footer {
+    background-color: rgb(170, 144, 156);
+}
+
+.copyright {
+    background-color: rgb(155, 128, 141);
 }
 
 /* -------------------------------- Media Queries */
