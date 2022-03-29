@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
-
+<!-- Extra CSS -->
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'events/css/events.css' %}">
 {% endblock %}
-
+<!-- Page Header -->
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -12,22 +12,24 @@
         </div>
     </div>
 {% endblock %}
-
+<!-- Main Content -->
 {% block content %}
 <!-- Start of Intro -->
+<div class="overlay"></div>
 <section id="intro">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-md-12 mt-3 text-center">
-                <h2>Events</span></h2>
+                <hr>
+                <h2 logo-font mb-4>Events</span></h2>
                 <p>Keep up with our latest events and news!</p>
+                <hr>
             </div>
         </div>
     </div>
 </section>
 <!-- End of Intro -->
-<!-- Start of Blog Posts -->
-<!-- Please note code was used from the Code Institute I Think Therefore I Blog tutorial to help create this project -->
+<!-- Start of Posts -->
 <div class="container">
     <div class="row">
         <!-- Blog Entries Column -->
@@ -40,13 +42,10 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="" alt="">
+                                    src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
@@ -89,5 +88,5 @@
     </nav>
     {% endif %}
 </div>
-<!-- End of Blog Posts -->
+<!-- End of Posts -->
 {% endblock %}
