@@ -19,17 +19,6 @@
     color: black;
 }
 
-.page-link {
-    color: #fff;
-    background-color: #212529;
-    border: solid 1px rgb(214, 170, 255);
-}
-
-.page-link:hover {
-    color: rgb(214, 170, 255);
-    background-color: #212529;
-}
-
 .post-title {
     margin-top: 20%;
     margin-left: 5%;
