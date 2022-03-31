@@ -106,7 +106,7 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-.main-display-text {
+.main-display-text, .error-page {
     background-color: rgb(204, 174, 188);
 }
 
