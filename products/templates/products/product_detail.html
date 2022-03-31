@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load crispy_forms_tags %}
-
+<!-- Page Header -->
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -9,7 +9,7 @@
         </div>
     </div>
 {% endblock %}
-
+<!-- Product Details Section -->
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
@@ -79,7 +79,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <!-- Keep Shopping Button to allow users to return back to products page -->
                             <div class="col{% if s %}-12 mt-2{% endif %}">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
@@ -96,7 +96,6 @@
             </div>
         </div>
     </div>
-
     <div class="container">
         <div class="row">
             <!-- View Posted Reviews Section -->
@@ -138,7 +137,7 @@
         </div>
     </div>
 {% endblock %}
-
+<!-- Javascript -->
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}

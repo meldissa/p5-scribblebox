@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+<!-- Page Header -->
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -8,7 +8,7 @@
         </div>
     </div>
 {% endblock %}
-
+<!-- Products Section -->
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
@@ -28,6 +28,7 @@
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
+                            <!-- User can sort products by categories -->
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
@@ -43,6 +44,7 @@
                     </div>
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
+                            <!-- User can search keywords and return a product result which matches -->
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
                                 <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
                             {% endif %}
@@ -51,6 +53,7 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!-- Products are displayed to the user -->
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
@@ -124,7 +127,7 @@
         </a>	
     </div>
 {% endblock %}
-
+<!-- Javascript -->
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">

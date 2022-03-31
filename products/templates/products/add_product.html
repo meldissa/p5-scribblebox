@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+<!-- Page Header -->
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -8,7 +8,7 @@
         </div>
     </div>
 {% endblock %}
-
+<!-- Form to Add Product -->
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
@@ -20,7 +20,6 @@
                 <hr>
             </div>
         </div>
-
         <div class="row">
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
@@ -41,7 +40,7 @@
         </div>
     </div>
 {% endblock %}
-
+<!-- Javascript -->
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
