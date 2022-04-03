@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://p5-scribblebox.herokuapp.com/sitemap.xml
