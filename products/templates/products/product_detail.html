@@ -99,9 +99,9 @@
     <div class="container">
         <div class="row">
             <!-- View Posted Reviews Section -->
-            <div class="col-md-8 card mb-4  mt-3 ">
-                <h3>Product Reviews:</h3>
+            <div class="col-md-8 card mb-4 mt-3">
                 <div class="card-body">
+                    <h3>Product Reviews:</h3>
                     {% for review in reviews %}
                     <div class="reviews" style="padding: 10px;">
                         <p class="font-weight-bold">
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <!-- Leave a Review Section -->
-            <div class="col-md-4 card mb-4  mt-3 ">
+            <div class="col-md-4 card mb-4 mt-3">
                 <div class="card-body">
                     {% if user.is_authenticated %}
                     <h3>Leave a review:</h3>
@@ -124,7 +124,7 @@
                     <form method="POST" style="margin-top: 1.3em;">
                         {{ review_form | crispy }}
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-outline-black rounded-0 text-uppercase">Submit &raquo;</button>
+                        <button type="submit" class="btn btn-black btn-outline-black rounded-0 text-uppercase">Submit &raquo;</button>
                     </form>
                     {% else %}
                         <div>
