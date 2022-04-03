@@ -100,7 +100,7 @@
         <div class="row">
             <!-- View Posted Reviews Section -->
             <div class="col-md-8 card mb-4  mt-3 ">
-                <h3>Products Reviews:</h3>
+                <h3>Product Reviews:</h3>
                 <div class="card-body">
                     {% for review in reviews %}
                     <div class="reviews" style="padding: 10px;">
@@ -124,7 +124,7 @@
                     <form method="POST" style="margin-top: 1.3em;">
                         {{ review_form | crispy }}
                         {% csrf_token %}
-                        <button type="submit" class="btn">Submit &raquo;</button>
+                        <button type="submit" class="btn btn-outline-black rounded-0 text-uppercase">Submit &raquo;</button>
                     </form>
                     {% else %}
                         <div>
