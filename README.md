@@ -26,15 +26,15 @@ ScribbleBox is an e-commerce website that aims to provide users with a variety o
 2. [Features](#features)
     * [Current Features](#current-features)
     * [Future Features](#future-features)
-3. [Technologies Used](#tech-used)
-4. [Testing](#testing)
+3. [Web Marketing & Business](#web-marketing-business)
+4. [Technologies Used](#tech-used)
+5. [Testing](#testing)
     * [User Stories Testing](#user-testing)
     * [Validation Testing](#validation-testing)
-    * [Automated Testing](#auto-testing)
     * [Known Issues and Resolutions](#issues)
-5. [Deployment](#deployment)
-6. [Credits](#credits)
-7. [Acknowledgements](#acknowledgements)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
+8. [Acknowledgements](#acknowledgements)
 
 ## User Experience (UX) <a name="ux"></a>
 
@@ -166,104 +166,121 @@ Two relational databases were used to create this site.
 
 During production SQLite was used and for deployment Heroku Postgres was used.
 
-The database contains three custom models - review, contact and posts.
+The database contains the following models, three of which are custom models - review, contact and posts.
 
 
 ## Features <a name="features"></a>
 
 ### Current Features <a name="current-features"></a>
 
-For this project I opted for a website with different pages accessed by clicking the nav links, this is fully responsive and consists of a header, footer and the following main sections; Home, About Us, Blog Post, Sign Up, Login and Search.
+For this project I opted for a website with different pages accessed by clicking the nav links, this is fully responsive and consists of a header, footer and the following main sections; Home, Bag, Checkout, Contact, Events, Products, Profiles, Sign Up, Login and 404 page.
 
 __Navigation__:
 
 * This feature is present on all the pages/sections and is fixed to the top.
 * The header section has a fully responsive navigation bar which consists of the logo, located on the left-hand side.
-* The navigation buttons for Home, About Us, Sign Up, Login (located left-hand side after the logo) and a Search bar (located on the right-hand side).
-* Style has been applied to the logo and buttons on the left-hand side so the user is able to hover over these to signify that the links can be clicked.
+* The navigation buttons allows the user to access various pages to the site and to search products via the search bar.
+* On desktop version the logo can be clicked to take the user back to the home page.
 * The Search bar has placeholder text to indicate to the user that they can enter text in the box provided. 
-* Style has also been applied to the search button next to the input box to indicate to the user that this has been selected and can be clicked.
+* User can also access the bag and profile links from the navigation.
+* Banner to display to the user that free shipping is available over a certain threshold.
 
 __Home__:
 
 * This is the default page displayed when the user accesses the website.
-* This page can also be viewed by clicking the Dessert Island logo or the home button from the navigation.
-* An introductory message displayed to the user.
-* Recipe blog posts displayed (max of 6) per page.
-* There is a 'Next' button that allows user to click and navigate to the next page to view more recipes.
-* Alternatively 'Prev' button can be clicked to return a page back.
-* Recipe blog posts are displayed from most recent to oldest.
-* Each post is displayed in a card style with an image, author, date, title and like count.
-* Style has been applied so the user can hover over the text for the posts which will underline to indicate that this can be selected.
-* Selecting the clickable text will take the user to the 'Blog Posts' page to display the full content of the recipe post.
+* This page can also be viewed by clicking the ScribbleBox logo (desktop) or the home button (mobile) from the navigation.
+* A background image is presented to display various stationery products and a button to allow the user to start shopping.
+* Selecting the clickable text will take the user to the products page to display all products.
 
-__About__:
+__Bag__:
 
-* User can access this section by clicking the 'About' button from the navigation.
-* A parallax header image added at the top (after the navigation).
-* User is able to scroll further down the page and access the text which provides more detail about the website and it's purpose.
-* For new users, a sign up link is also within the text which will take them to the 'Sign Up' page and allow the user to create an account.
+* User can access this section by clicking the bag icon from the navigation.
+* User is displayed with all the items added to the bag with the total quantity and price.
+* User can amend the quantity of the item added or completely remove this.
+* User is able to go back and browse more products by selecting the 'Keep Shopping' button
+* Alternatively, user can commit to the bag and proceed with the purchase by selecting the 'Secure Checkout' button
 
-__Blog Post__:
+__Checkout__:
 
-* Accessed once the user selects a recipe post from the 'Home' or 'Search' page.
-* Recipe title and image displayed at the top (image is not displayed on smaller devices).
-* Content is then followed by the ingredient list and method steps.
-* Further below is the comment section which users can view even if not logged in.
-* Comment section is available and displayed for logged in users who can submit a comment.
-* This is then sent for approval which is a feature only the Admin can access.
-* Alert is displayed to indicate the comment has been sent for approval.
-* Approved comments can be viewed on the post.
+* Accessed once user clicks the 'Secure Checkout' button from the bag page.
+* User is prompted to enter shipping details and card details for the payment.
+* If user is already logged in then the shipping details are already pre-populated if user has previously made purchases.
+* The item details and total price is displayed to the user.
+* User can commit to the purchase of items by selecting the 'Complete Order' button.
+* User is also able to adjust the bag by selecting the 'Adjust Bag' button which will take them back to the bag page.
+
+__Contact__:
+
+* Accessed once the user clicks the 'Contact Us' link from the footer.
+* User is displayed with a contact form to fill out with the required fields of email, subject and message.
+* Form can be submitted via the 'Send' button upon which the user will receive a confirmation page to indicate message has been submitted successfully.
+* If user changes their mind, by clicking the 'Cancel' button the user will be taken back to the home page without submitting the form.
+* Admin receives an email notification that a customer has submitted the form.
+
+__Events__:
+
+* Accessed from the main navigation under Events > Posts or by clicking the 'Events' link from the footer.
+* User is displayed with posts created by the admin.
+* A maximum of 6 posts are displayed per page, once over the limit user can access further posts by selecting the 'Next' button.
+* User can view further details by selecting the post title, this will take them to the post detail page.
+* User can navigate back to the posts page by selecting the 'Back To Posts' button.
+
+__Products__:
+
+* User can access this via the main navigation links which is seperated by different categories, or by selecting the 'Products' link via footer to view all products.
+* On the products page, user is displayed with a view of the products available including the product image, price and rating.
+* User is able to sort the product view via the 'Sort by' function.
+* User can view more details by clicking on the desired product.
+* The product details page displays the description of the product and allows the user to add desired quantity to the bag.
+* Alternatively the user can navigate back to the product page by clicking the 'Keep Shopping' button.
+
+__Profiles__:
+
+* Accessed from the main navigation by selecting the 'My Account' icon and then selecting 'My Profile'.
+* Delivery information is presented to the user which can be updated via the 'Update Information' button.
+* Order history is also displayed to the user of any previous purchases made.
 
 __Sign Up__:
 
-* Accessed from the navigation bar by selecting the 'Sign Up' button. 
+* Accessed from the navigation bar by selecting the 'My Account' button and then 'Register' from dropdown. 
 * Once selected, the user is taken to the 'Sign Up' page.
-* A parallax header image added at the top (after the navigation).
-* New users are prompted to enter a username, email (optional), password and password again to confirm.
-* All fields apart from the email (optional) are required for the user to be able to create an account, otherwise an error is displayed.
-* Upon successful creation the user is then able to login to the account.
+* New users are prompted to enter a username, email, email again, password and password again to confirm.
+* All fields are required for the user to be able to create an account, otherwise an error is displayed.
+* Upon successful creation the user is sent an email with an activation link.
+* Once activated the user is verified and can login to their account.
 * Alert is displayed to indicate that the user has signed in.
 * Existing users are provided with the sign in link to take them to the 'Login' page.
 
 __Login__:
 
-* Accessed from the navigation bar by selecting the 'Login' button. 
+* Accessed from the navigation bar by selecting the 'My Account' button and then 'Login' from the dropdown. 
 * Once selected, the user is taken to the 'Login' page.
-* A parallax header image added at the top (after the navigation).
-* Existing users can enter their username and password and click the login button.
+* Existing users can enter their username or email and password and click the login button.
 * Upon successful login, user is taken to the 'Home' page.
 * Alert is displayed to indicate that the user has signed in.
-* Incorrect username and password will faily to log the user into their account and a message will be displayes on the 'Login' page to indicate this.
+* Incorrect username and password will fail to log the user into their account and a message will be displayes on the 'Login' page to indicate this.
 * New users are provided with the register link to take them to the 'Sign Up' page to create an account.
+* User can also select the forgot password link to re-set the password which will take them to the password reset page.
 
 __Logout__:
 
 * Option only available to users who are currently logged in.
-* Accessed from the navigation bar by selecting the 'Logout' button.
+* Accessed from the navigation bar by selecting the 'My Account' button and 'Logout' from the dropdown.
 * Once selected, user will be taken to the 'Sign Out' page to confirm that they wish to sign out from their account.
-* A parallax header image added at the top (after the navigation).
 * User can select the sign out button option which will successfully sign out the user from their account and return them to the home page.
 * Alert added to indicate that the user has signed out.
 
-__Search__:
+__404__:
 
-* Accessed from the navigation bar in the top right-hand corner. 
-* Placeholder text added to indicate to the user that text can be entered in the input box.
-* User cannot submit an empty search and user has to enter a max of 2 characters otherwise an error is displayed.
-* User is able to click the search button once the requirements are met (as stated above), this will take the user to the 'Search' page.
-* A parallax header image added at the top (after the navigation).
-* User is able to scroll down and view the displayed results of the recipes which match the keywords entered.
-* Prior to the search results, the user is displayed with the keyword searched and below the results are displayed.
-* For any successful matches display the recipe card (same as the ones on the 'Home' page), the user can click this and be taken to the recipe page.
-* For any unsuccessful matches, the user is displayed with a message to state that no results have been found for this keyword.
+* Only accessed when user error occurs or invalid links are being accessed.
+* User is presented with the error message and provided with a link to direct back to the home page.
 
 __Footer__:
 
-* This feature is present on all the pages/sections and is fixed to the top.
+* This feature is present on all the pages/sections.
 * Social media links can be accessed by the user.
-* Hover style applied to signal to the user which link they are selecting and opening. 
-* Links open in a new tab so the user is not taken away from the main website and can easily return.
+* Useful Links are available to the user to access different pages of the website. 
+* A newsletter subsciption is available where user can signup for promotional offers and discounts.
 
 __Features Exclusive to Admin__:
 
@@ -276,6 +293,15 @@ __Features Exclusive to Admin__:
 Due to time constraints, I was unable to apply additional features, in the future I would like to implement the following:
 
 * A Wishlist functionality to allow users to add products to their wishlist and to be able to revisit this and make a purchase of the products added.
+
+
+## Web Marketing & Business <a name="web-marketing-business"></a>
+
+As part of web marketing a Facebook page was created for ScribbleBox. Please note, I have utilised the Code Institute template to create a mock Facebook page.
+
+![](docs/images/facebook-page.png)
+
+The business model for ScribbleBox is B2C (Business to Customer). As the target audience are regular customers who would access the website to make a purchase, the website has been designed to allow ease of access to view and search products as well as to add items to the bag and checkout with minimal steps to ensure that the customer goes through with the purchase. There are also additional incentives added for free delivery if spending above a certain threshold to encourage the customer to purchase more items. The website also has newsletter marketing with promotional offers and discounts to entice the customer to sign up and be a returning customer. Overall, given the business model the website has been kept as simple as possible to allow ease of navigation for the customer to ensure they commit with the purchase.
 
 
 ## Technologies Used <a name="tech-used"></a>
@@ -364,9 +390,6 @@ This website was also tested on the following devices:
 * iPad Pro
 * MacBook Air
 * Android One Plus 8 Pro
-
-
-### Automated Testing <a name="auto-testing"></a>
 
 
 ### Known Issues and Resolutions <a name="issues"></a>
