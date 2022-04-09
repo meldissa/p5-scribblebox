@@ -166,7 +166,38 @@ Two relational databases were used to create this site.
 
 During production SQLite was used and for deployment Heroku Postgres was used.
 
-The database contains the following models, three of which are custom models - review, contact and posts.
+![](docs/images/dbdiagram.png)
+
+The database diagram was created using [dbdiagram.io](https://dbdiagram.io/home)
+
+The database contains the following models, three of which are custom models - Review, Contact and Post.
+
+* Order
+    * Contains information about the order placed by the user, has a relationship with the OrderLineItem and UserProfile models.
+
+* OrderLineItem
+    * Contains infromation about the an entry within an order, has a relationship with the Order and Product models.
+
+* Category
+    * Contains information on different product categories, feeds the category infromation to the Product mdoel.
+
+* Product
+    * Contains information about the product, obtains category information from the Category model via ForeignKey.
+
+* UserProfile
+    * Contains information about the user, has a one to one relationship with the User model.
+
+* User
+    * Contains information about the user, this is a Django built-in model.
+
+* Review
+    * Contains information about reviews submitted by the user, has a relationship with the Product model.
+
+* Contact
+    * Contains information about form submitted by a site visitor, has no external relationships with other models.
+
+* Post
+    * Contains information about posts submitted by admin, has a relationship with the User model.
 
 
 ## Features <a name="features"></a>
@@ -318,6 +349,8 @@ I have also utilised the following frameworks, libraries, and tools:
     * GitHub has been used to create a repository to host the project and receive updated commits from GitPod.
 * [Balsamiq](https://balsamiq.com/): 
     * I used Balsamiq to create the wireframe for the website for the basic structure and layout.
+* [dbdiagram](https://dbdiagram.io/home): 
+    * I used dbdiagram to create the database diagram model for the website.
 * [Unsplash](https://unsplash.com/): 
     * Unsplash has been used for copyright free images for this project.
 * [Freepik](https://www.freepik.com/): 
