@@ -44,7 +44,7 @@ ScribbleBox is an e-commerce website that aims to provide users with a variety o
 
 The main business goal for ScribbleBox is to provide users with an e-commerce website from which the user can view variety of stationery products and have the ability to add items to their basket to be able to make a purchase. The website also aims to provide a functionality for users to be able to create their own accounts to checkout and leave reviews for different products.
 
-The business model for this website is B2C (Business to Customer). The main target audience for this website are stationery lovers, who enjoy collecting various types of stationery to add to their collection. The business also extends to a more general audience of people, so that anyone who is looking to get new and unique stationery can do so through this website.
+The business model for this website is B2C (Business to Consumer). The main target audience for this website are stationery lovers, who enjoy collecting various types of stationery to add to their collection. The business also extends to a more general audience of people, so that anyone who is looking to get new and unique stationery can do so through this website.
 
 
 ### User Stories <a name="user-stories"></a>
@@ -328,11 +328,17 @@ Due to time constraints, I was unable to apply additional features, in the futur
 
 ## Web Marketing & Business <a name="web-marketing-business"></a>
 
-As part of web marketing a Facebook page was created for ScribbleBox. Please note, I have utilised the Code Institute template to create a mock Facebook page.
+As part of web marketing a Facebook page was created for ScribbleBox. 
+
+Please note, I have utilised the Code Institute template to create a mock Facebook page.
 
 ![](docs/images/facebook-page.png)
 
-The business model for ScribbleBox is B2C (Business to Customer). As the target audience are regular customers who would access the website to make a purchase, the website has been designed to allow ease of access to view and search products as well as to add items to the bag and checkout with minimal steps to ensure that the customer goes through with the purchase. There are also additional incentives added for free delivery if spending above a certain threshold to encourage the customer to purchase more items. The website also has newsletter marketing with promotional offers and discounts to entice the customer to sign up and be a returning customer. Overall, given the business model the website has been kept as simple as possible to allow ease of navigation for the customer to ensure they commit with the purchase.
+The business model for ScribbleBox is B2C (Business to Consumer). As the target audience are regular customers who would access the website to make a purchase, the website has been designed to allow ease of access to view and search products as well as to add items to the bag and checkout with minimal steps to ensure that the customer goes through with the purchase. 
+
+There are also additional incentives added for free delivery if spending above a certain threshold to encourage the customer to purchase more items. The website also has newsletter marketing with promotional offers and discounts to entice the customer to sign up and be a returning customer. 
+
+Overall, given the business model the website has been kept as simple as possible to allow ease of navigation for the customer to ensure they commit with the purchase.
 
 
 ## Technologies Used <a name="tech-used"></a>
