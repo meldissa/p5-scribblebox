@@ -406,6 +406,15 @@ To test the HTML code, I used the __W3C Markup Validation Service__.
 
 To test the CSS code, I used the __W3C CSS Validation Service__.
 
+The following CSS files were tested:
+
+* checkout.css
+* events.css
+* profile.css
+* base.css
+
+No issues were detected.
+
 
 To test the JavaScript code, I used the __JSHint Validation Service__.
 
