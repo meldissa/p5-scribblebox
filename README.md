@@ -172,32 +172,32 @@ The database diagram was created using [dbdiagram.io](https://dbdiagram.io/home)
 
 The database contains the following models, three of which are custom models - Review, Contact and Post.
 
-* Order
-    * Contains information about the order placed by the user, has a relationship with the OrderLineItem and UserProfile models.
+__Order__:
+* Contains information about the order placed by the user, has a relationship with the OrderLineItem and UserProfile models.
 
-* OrderLineItem
-    * Contains infromation about the an entry within an order, has a relationship with the Order and Product models.
+__OrderLineItem__:
+* Contains infromation about the an entry within an order, has a relationship with the Order and Product models.
 
-* Category
-    * Contains information on different product categories, feeds the category infromation to the Product mdoel.
+__Category__:
+* Contains information on different product categories, feeds the category infromation to the Product mdoel.
 
-* Product
-    * Contains information about the product, obtains category information from the Category model via ForeignKey.
+__Product__:
+* Contains information about the product, obtains category information from the Category model via ForeignKey.
 
-* UserProfile
-    * Contains information about the user, has a one to one relationship with the User model.
+__UserProfile__:
+* Contains information about the user, has a one to one relationship with the User model.
 
-* User
-    * Contains information about the user, this is a Django built-in model.
+__User__:
+* Contains information about the user, this is a Django built-in model.
 
-* Review
-    * Contains information about reviews submitted by the user, has a relationship with the Product model.
+__Review__:
+* Contains information about reviews submitted by the user, has a relationship with the Product model.
 
-* Contact
-    * Contains information about form submitted by a site visitor, has no external relationships with other models.
+__Contact__:
+* Contains information about form submitted by a site visitor, has no external relationships with other models.
 
-* Post
-    * Contains information about posts submitted by admin, has a relationship with the User model.
+__Post__:
+* Contains information about posts submitted by admin, has a relationship with the User model.
 
 
 ## Features <a name="features"></a>
