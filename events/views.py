@@ -79,7 +79,9 @@ def add_post(request):
             messages.success(request, 'Successfully added post!')
             return redirect('posts')
         else:
-            messages.error(request, 'Failed to add post. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to add post. '
+                           'Please ensure the form is valid.')
     else:
         form = PostForm()
 
@@ -108,7 +110,9 @@ def edit_post(request, slug, *args, **kwargs):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('post_detail', args=[slug]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to update product. Please ensure the form '
+                           'is valid.')
     else:
         form = PostForm(instance=post)
         messages.info(request, f'You are editing {post.title}')

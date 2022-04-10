@@ -472,6 +472,28 @@ No issues were detected.
 
 To test the Python code, I used the __PEP8 Online Validation Service__.
 
+The following apps were tested:
+
+* bag
+* checkout
+* contact
+* events
+* home
+* products
+* profiles
+* scribblebox
+
+All files passed through the validator and no issues were detected with the exception of the following files:
+
+* checkout/models.py
+* checkout/views.py
+* checkout/webhook.py
+* products/views.py
+* products/widgets.py
+* scribblebox/settings.py
+
+This was due to the rows in question being too long, however nothing further could be done to reduce the line count therefore these rows were not amended and left as they are.
+
 
 I also used the __Chrome Dev Tools Lighthouse Report__ to test both on desktop and mobile.
 
