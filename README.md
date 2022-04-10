@@ -403,6 +403,39 @@ __Admin Only User Story Testing__
 
 To test the HTML code, I used the __W3C Markup Validation Service__.
 
+The following HTML files were tested:
+
+* bag/bag-total.html
+* bag/bag.html
+* bag/checkout-buttons.html
+* bag/product-image.html
+* bag/product-infot.html
+* bag/quantity-form.html
+* checkout/checkout_success.html
+* checkout/checkout.html
+* contact/contact_success.html
+* contact/contact.html
+* events/add_post.html
+* events/edit_post.html
+* events/post_detail.html
+* events/posts.html
+* home/index.html
+* products/custom_widget_templates/custom_clearable_file_input.html
+* products/add_product.html
+* products/edit_product.html
+* products/product_detail.html
+* products/products.html
+* profiles/profile.html
+* base.html
+* 404.html
+* includes/footer.html
+* includes/main-nav.html
+* includes/mobile-top-header.html
+* includes/toasts/toast_error.html
+* includes/toasts/toast_info.html
+* includes/toasts/toast_success.html
+* includes/toasts/toast_warning.html
+
 
 To test the CSS code, I used the __W3C CSS Validation Service__.
 
@@ -417,6 +450,24 @@ No issues were detected.
 
 
 To test the JavaScript code, I used the __JSHint Validation Service__.
+
+The following JS files were tested:
+
+* stripe_elements.js
+* countryfield.js
+
+The following HTML files were tested with script code:
+
+* bag/bag.html
+* events/add_post.html
+* events/edit_post.html
+* products/includes/quantity_input_script.html
+* products/add_product.html
+* products/edit_product.html
+* products/products.html
+* base.html
+
+No issues were detected.
 
 
 To test the Python code, I used the __PEP8 Online Validation Service__.
