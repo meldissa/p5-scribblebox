@@ -393,6 +393,8 @@ I have also utilised the following frameworks, libraries, and tools:
 
 ## Testing <a name="testing"></a>
 
+All testing was completed manually for this project.
+
 ### User Stories Testing <a name="user-testing"></a>
 
 
