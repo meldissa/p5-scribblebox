@@ -301,9 +301,9 @@ __Logout__:
 * User can select the sign out button option which will successfully sign out the user from their account and return them to the home page.
 * Alert added to indicate that the user has signed out.
 
-__404__:
+__404 & 500__:
 
-* Only accessed when user error occurs or invalid links are being accessed.
+* Only accessed when error occurs or invalid links are being accessed.
 * User is presented with the error message and provided with a link to direct back to the home page.
 
 __Footer__:
@@ -324,6 +324,7 @@ __Features Exclusive to Admin__:
 Due to time constraints, I was unable to apply additional features, in the future I would like to implement the following:
 
 * A Wishlist functionality to allow users to add products to their wishlist and to be able to revisit this and make a purchase of the products added.
+* Allow users to click on items in the shopping bag to take them back to the products page for additional ease of navigation.
 
 
 ## Web Marketing & Business <a name="web-marketing-business"></a>
@@ -430,6 +431,7 @@ The following HTML files were tested:
 * profiles/profile.html
 * base.html
 * 404.html
+* 500.html
 * includes/footer.html
 * includes/main-nav.html
 * includes/mobile-top-header.html
@@ -516,6 +518,8 @@ This website was also tested on the following devices:
 
 
 ### Known Issues and Resolutions <a name="issues"></a>
+
+* During testing it was identified that when users create a new account the verification email displayed 'example.com' instead of the domain name for ScribbleBox. This was also the case for emails received in relation to password resets. To resolve the issue, the allauth default .txt files were amended to ensure the correct business name is displayed.
 
 
 ## Deployment <a name="deployment"></a>
