@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}500 server error{% endblock %}
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<!-- Start of 404 Page Section -->
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-xl-8 col-xxl-6 mx-auto mt-5 mb-5 text-center error-page">
+            <h1 class="font-black-bg center-align">500 Server Error!</h1>
+            <p class="font-black-bg center-align">Oops! An error has occured, click <a href="{% url 'home' %}">here</a> to go back to the home page.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
