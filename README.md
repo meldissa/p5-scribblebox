@@ -519,7 +519,11 @@ This website was also tested on the following devices:
 
 ### Known Issues and Resolutions <a name="issues"></a>
 
-* During testing it was identified that when users create a new account the verification email displayed 'example.com' instead of the domain name for ScribbleBox. This was also the case for emails received in relation to password resets. To resolve the issue, the allauth default .txt files were amended to ensure the correct business name is displayed.
+* During testing it was identified that when users create a new account the verification email displayed 'example.com' instead of the domain name for ScribbleBox. This was also the case for emails received in relation to password resets. To resolve the issue, the allauth default .txt files were amended to ensure the correct business name is displayed and the following code was added to the settings.py file, ACCOUNT_EMAIL_SUBJECT_PREFIX = 'ScribbleBox ' to resolve the issue.
+
+* During testing it was identified that when a user has an item in the bag section that they are able to exceed the limit of 99 by manually typing a higher value within the input box. The form was also able to be submitted when the user had exceeded the maximum number of 99. Currently, the issue is left unresolved.
+
+* An additional issue identified with the bag section is that if enough quantity is added to reach at least a 7-figure sum in the total this results in an error 500 page being displayed to the user. Although it is very unlikely that the user would ever exceed such a sum, I have opted to create a custom error 500 page which would be displayed to the user in such a case so they are able to navigate back to the home page safely without having to exit the website completely due to the error.
 
 
 ## Deployment <a name="deployment"></a>
