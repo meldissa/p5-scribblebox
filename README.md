@@ -100,7 +100,7 @@ To achieve the strategy goals, I want to implement the following features:
 * A Search bar to allow users to enter specific keywords to be able to locate desired products
 * A Footer located at the bottom of the website which allows the user to access social media links, useful links and subscribe to newsletter
 * A fully responsive design that will work on different devices including desktop, tablets, and mobile devices, allowing users to access the site anytime and anywhere
-* An Error 404 Page to allow users to redirect back to Home page in case of any errors
+* An Error 404 & 500 Page to allow users to redirect back to Home page in case of any errors
 * Full CRUD functionality for Admin to allow to create, read, update and delete products and posts
 
 
@@ -501,6 +501,21 @@ This was due to the rows in question being too long, however nothing further cou
 
 I also used the __Chrome Dev Tools Lighthouse Report__ to test both on desktop and mobile.
 
+The score for the lighthouse report for desktop and mobile run across the difference pages varied from 73 lowest to 100 highest. Further steps were taken to try to improve the score, however no major score changes could be achieved for the report.
+
+Reports for the following pages were run:
+
+* [Home Page](docs/images/lh-home.png)
+* [Contact Page](docs/images/lh-contact.png)
+* [Events Page](docs/images/lh-events.png)
+* [Register Page](docs/images/lh-register.png)
+* [Login Page](docs/images/lh-login.png)
+* [Profile Page](docs/images/lh-profile.png)
+* [Products Page](docs/images/lh-products.png)
+* [Product Detail Page](docs/images/lh-product-detail.png)
+* [Bag Page](docs/images/lh-bag.png)
+* [Checkout Page](docs/images/lh-checkout.png)
+
 
 This website was tested on the following browsers:
 
@@ -510,7 +525,6 @@ This website was tested on the following browsers:
 
 This website was also tested on the following devices:
 
-* iPhone 11 Pro
 * iPhone 12 Pro
 * iPad Pro
 * MacBook Air
