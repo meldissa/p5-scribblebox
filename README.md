@@ -75,8 +75,8 @@ The business model for this website is B2C (Business to Consumer). The main targ
 
 * __Site Owner Goals - Admin Only:__
 
-  * As a Site Admin I want to be ble to approve or disapprove comments/reviews so that I can filter out objectionable comments
-  * As a Site Admin I want to be able to create draft posts/products so that I can finish writing the content later
+  * As a Site Admin I want to be able to approve or disapprove comments/reviews so that I can filter out objectionable comments
+  * As a Site Admin I want to be able to create draft posts so that I can finish writing the content later
   * As a Site Admin I want to be able to create, read, update and delete posts/products so that I can manage my blog content
   * As a Site Admin I want to be able to provide a simple design so that users have an incentive to return back to the website
   * As a Site Admin I want to be able to gather user email addresses so that I can mail details about new products
@@ -398,8 +398,245 @@ All testing was completed manually for this project.
 
 ### User Stories Testing <a name="user-testing"></a>
 
+__Products__
+
+From the home page, the user is presented with an introductionary text and a 'Shop Now' button. This will direct the user to the products page. The user is also able to access the products page via the header section. From there the products are sorted in different categories that the user is able to select. Lastly, the user is also able to search products via the search bar in the header section using different keywords which will display a filtered result for any that match the keyword entered.
+
+![](docs/images/ut-product1.png)
+
+![](docs/images/ut-product2.png)
+
+From the products page, the user is displayed with a list of products which contain and image, product name, category, price and rating. The total amount of products is also displayed in the top left corner. The user can also proceed to filter the products using the filter bar in the top right corner. To filter for specific categories, the user can select the header option and from the dropdowns select the specificity of the filtering.
+
+![](docs/images/ut-product3.png)
+
+![](docs/images/ut-product4.png)
+
+Once the user selects a product by clicking the product image, they will be directed to the product details page. From here the user can view the product description and select the quantity to add to the bag if they wish to purchase this product.
+
+![](docs/images/ut-product5.png)
+
+In addition, further down the page is the product reviews section where the user can view any previously added reviews for the product. They are also able to add their own reviews if logged into the user account. If the user is not logged in, links will be provided to direct the user either to register for an account or login to an already existing account.
+
+![](docs/images/ut-product6.png)
+
+Logged in users will be displayed with a add review section which allows the user to enter a product review comment.
+
+![](docs/images/ut-product7.png)
+
+Once submitted, an alert message will be displayed to indicate that the comment is pending approval. Once the admin has approved the comment this will be now displayed on the product page.
+
+![](docs/images/ut-product9.png)
+
+![](docs/images/ut-product8.png)
+
+Once the user has added a product to their bag, this will update the bag icon and will display the total sum added to the bag. The user is also displayed with a secure checkout option to allow them to proceed with the purchase with ease. Each time the bag is updated a new message with the total is displayed.
+
+![](docs/images/ut-product10.png)
+
+The following user stories have been achieved from this section:
+
+* As a Shopper I want to be able to view a list of products so that I can select something to purchase
+* As a Shopper I want to be able to view individual product detail so that I can identify the price, description, product rating and product image
+* As a Shopper I want to be able to easily view the total of my purchases at any time so that I can avoid spending too much
+* As a Shopper I want to be able to sort the list of available products so that I can easily identify the best rated, best priced and categorically sort the products
+* As a Shopper I want to be able to sort a specific category of product so that I can find the best priced or best rated product in a specific category or sort the products in that category by name
+* As a Shopper I want to be able to search for a product by name or description so that I can find a specific product I’d like to purchase
+* As a Shopper I want to be able to easily see what I’ve searched for and the number of results so that I can quickly decide whether the product I want is available
+* As a Shopper I want to be able to add reviews to product so that I can rate the product accordingly to past purchases and use
+
+
+__Shopping Bag & Checkout__
+
+By selecting 'Go to Secure Checkout' once a product has been added to the bag, the user will be directed to the shopping bag page. Alternatively, the user can simply click on the bag icon and will be directed to the shopping bag page.
+
+![](docs/images/ut-bag1.png)
+
+From the shopping bag page, the user can view the products added to the bag, the price, quantity and subtotal for each product. At the bottom of the page, the user is displayed with the bag total, delivery chargers and the grand total cost of the purchase.
+
+![](docs/images/ut-bag2.png)
+
+The user is able to amend their bag items and quantity if desired. To change the quantity the user can use the + and - icons to increase or decrease the product quantity. Then selecting the update button will proceed to update their bag with the desired quantity change and this will subsequently update the grand total of the bag. The user can also manually enter the number of quantity they wish to amend to. The user can also remove the product from the bag by selecting the remove button. This will completely remove the item in the bag. Each time an amendment is made to the bag a new alert message will come up with the changes.
+
+Once the user is happy with the bag, by selecting the 'Secure Checkout' button they will be directed to the checkout page.
+
+![](docs/images/ut-bag3.png)
+
+The user will be prompted to fill out the delivery information and in addition will be displayed with the total contents of the purchase. The user is able to navigate back to the shopping bag if they wish to make further amendments via the 'Adjust Bag' button. Otherwise, the user can click the 'Complete Order' button to proceed with the payment. The payment is processed via Stripe which is a secure method.
+
+![](docs/images/ut-bag4.png)
+
+Once the order is submitted, the user is directed to the confirmation page which will display the order confirmation. 
+
+![](docs/images/ut-bag5.png)
+
+The user will also receive an email of the order confirmation to the registered email address for the account. In addition, under the 'My Account' dropdown 'My Profile' the user can view this past order.
+
+The following user stories have been achieved from this section:
+
+* As a Shopper I want to be able to view the details in my cart so that I can confirm everything before purchase
+* As a Shopper I want to be able to add, update and delete products in my cart so that I can take control of my purchase
+* As a Shopper I want to be able to have an easy payment system and my payment details secured so that I can feel comfortable providing information
+
+
+__My Account__
+
+From the header section the user is able to access the 'My Account' section by clicking the icon in the top-right corner. From the dropdown, the user can either select 'Register' or 'Login' which will direct the user to the appropriate web pages. The user is also able to access these links via the footer from the 'Useful Links' section.
+
+![](docs/images/ut-user1.png)
+
+If the user selects 'Register' from the dropdown menu, they will be directed to the sign up page. The user is prompted to enter the relevant details to complete the account registration process. These are required fields therefore the sign up button cannot be clicked prior to entering the details. Once the user has entered the details, they are now able to submit the form by clicking the sign up button.
+
+![](docs/images/ut-user2.png)
+
+The user is then directed to a new page to inform them that an activation email has been sent to the email address entered in the registration process. From here, the user will have to access their email account to view the email received with the activation link. Once clicking on the activation link, the user will be directed back to the website and asked to confirm the activation. Once confirmed, they registration process is fully complete and the user is now able to use the credentials to login to their account.
+
+![](docs/images/ut-user3.png)
+
+![](docs/images/ut-user4.png)
+
+![](docs/images/ut-user5.png)
+
+The user is able to login to their account via selecting the 'Login' option from the 'My Account' dropdown menu. From there, the user is directed to the sign in page and prompted to enter their credentials to be able to sign in.
+
+![](docs/images/ut-user6.png)
+
+After successful login attempt, the user is directed to the home page and displayed with an alert message to indicate that they are signed in. 
+
+![](docs/images/ut-user7.png)
+
+In the instance that the user cannot enter the correct password credentials, there is the option for the user to select the 'Forgot Password?' link. This will direct the user to the password reset page, from there the user is prompted to enter their email address and submit the form by clicking the 'Reset My Password' button. Completing this action will send an email message to the user, which can be accessed via their email account allowing the user to click the password reset link. This will re-direct the user back to the website and allow them to complete the password reset form.
+
+![](docs/images/ut-user6a.png)
+
+![](docs/images/ut-user6b.png)
+
+![](docs/images/ut-user6c.png)
+
+![](docs/images/ut-user6d.png)
+
+From here, the user is able to access their profile via the 'My Profile' dropdown option from 'My Account'. The profile page displays the user's delivery information which they are able to update at any time via the 'Update Information' button. In addition, the user is displayed with the order history from which they can view past purchases.
+
+![](docs/images/ut-user8.png)
+
+The user can logout from their account anytime by selecting the 'Logout' option from the 'My Account' dropdown menu. This will direct the user to the sign out page to confirm if they wish to logout. Confirmation of this action will proceed to logout the user and direct them back to the home page with an alert message displayed that the user has signed out now.
+
+![](docs/images/ut-user9.png)
+
+The following user stories have been achieved from this section:
+
+* As a Site User I want to be able to easily register for an account so that I can have a personal account and be able to view my profile
+* As a Site User I want to be able to easily login or logout so that I can access my personal account information
+* As a Site User I want to be able to easily recover my password in case I forget it so that I can recover access to my account
+* As a Site User I want to be able to receive an email confirmation after registering so that I can verify that my account registration was successful
+* As a Site User I want to be able to have a personalised user profile so that I can view my personal order history and order confirmation, and save my payment information
+
+
+__Contact Us__
+
+From the footer under the 'Useful Links' section, the user is able to select the 'Contact Us' link. Selecting this link will direct the user to the contact page.
+
+![](docs/images/ut-contact1.png)
+
+From the contact page, the user is presented with a form to fill out to be able to submit the query, this includes the user's email address, subject and main message. These are required fields to enter for the user to be able to submit the form. 
+
+![](docs/images/ut-contact2.png)
+
+Once the form is submitted via the 'Send' button, the user is directed to the confirmation page to indicate successful submission of the query.
+
+![](docs/images/ut-contact3.png)
+
+The side admin will then receive an email to advise that a query has been received from a customer which requires a response.
+
+![](docs/images/ut-contact4.png)
+
+The following user stories have been achieved from this section:
+
+* As a Site User I want to be able to contact or leave feedback regarding any queries, concerns or products
+
+__Events__
+
+From the header, the user is able to select the 'Events' link and from the dropdown the 'Posts' link which will direct the user to the events page. Alternatively, the user is able to access this page from the footer 'Useful Links' section by selecting the 'Events' link.
+
+![](docs/images/ut-events1.png)
+
+![](docs/images/ut-events2.png)
+
+From the events page, the user is able to view the posts submitted by the admin. The maximum posts per page is 6 from most recent to oldest, the next and prev buttons can be used to navigate between different pages if post number exceeds 6. Each post has an image, a title, and an excerpt which the user can view and click to view the post details. The user can also view the date and time the post was made and the number of likes.
+
+![](docs/images/ut-events3.png)
+
+![](docs/images/ut-events4.png)
+
+By selecting the post to view, the user is directed to the post detail page. Any users with a registered account are able to click the heart icon to like/unlike the post. The user can also navigate back to the posts page by clicking the 'Back to Posts' button.
+
+![](docs/images/ut-events5.png)
+
+The following user stories have been achieved from this section:
+
+* As a Site User I want to be able to keep up to date with the latest events and news regarding ScribbleBox and like/unlike posts
+
+
+__Social Media & Newsletter__
+
+From the footer, the user is able to access the social media links which are displayed in an icon format. By clicking the social media icons, this will open a new tab with the relevant social media link.
+
+![](docs/images/ut-footer1.png)
+
+In additon, the user is able to subscribe to the ScribbleBox newsletter. This required the user to enter their email address and click the 'Submit' button, upon which a confirmation message will be displayed that the user has subscribed to the newsletter.
+
+![](docs/images/ut-footer2.png)
+
+![](docs/images/ut-footer3.png)
+
+The newsletter functionality is run via MailChimp services. On the MailChimp website, the users email address will no appear to indicate that they are subscribed.
+
+The following user stories have been achieved from this section:
+
+* As a Site User I want to be able to sign up for a regular newsletter to keep up to date with the latest offers and discounts
+* As a Site User I want to be able to locate ScribbleBox's social media accounts so I can see their following and how well they are known and reliable
+* As a Site Admin I want to be able to gather user email addresses so that I can mail details about new products
+
 
 __Admin Only User Story Testing__
+
+The admin is able to approve and/or delete user review comments added to products via the admin page of the website. This is accessed under the Reviews section of the admin page, where the admin can view all the comments added by users. The comments with the red cross icon under the approved section will indicate that these comments have not yet been approved therefore not displayed on the website. The green icon comments have been already approved by the admin and these can be viewed on the website under the relevant product page. The admin can also delete any comments which are deemed inappropriate for the website.
+
+![](docs/images/ut-admin1.png)
+
+From the main home page, under the 'My Profile' section accessed from the header, the admin has additional links available which are 'Product Management' and 'Add Event Post'.
+
+![](docs/images/ut-admin2.png)
+
+Selecting the 'Product Management' link will direct the admin to the add a prodct page. From here the admin can enter the relevant details on the form to submit the form to add a new product to the website. Submitting the form will direct the admin to the product details page of the newly added product with a success message.
+
+![](docs/images/ut-admin3.png)
+
+The admin also has the capability to edit or delete products. These are displayed on each product on either the product details page or the product page. If delete is selected then the product is deleted from the database and this is confirmed via an alert message. By selecting the edit option, the admin is directed to the edit product page which allows for any changed to be made and saved.
+
+![](docs/images/ut-admin4.png)
+
+![](docs/images/ut-admin5.png)
+
+Selecting the 'Add Event Post' link will direct the admin to the add a post page. The admin is then able to fill out the form with the relevant information and submit this to create a new post. The admin can select whether to create this post as a draft or publish this straight away. Any published posts can be viewed on the events page, and any draft posts can be accessed in the admin section and approved later once editing is completed.
+
+![](docs/images/ut-admin6.png)
+
+The admin also has the capability to edit or delete posts (same as the products). These are displayed on each post on either the post details page or the events page. If delete is selected then the post is deleted from the database and this is confirmed via an alert message. By selecting the edit option, the admin is directed to the edit post page which allows for any changed to be made and saved.
+
+![](docs/images/ut-admin7.png)
+
+Any user which is not a superuser is also unable to access such content restricted to the superuser only.
+
+Overall, the website has a simple design which is easy to naviagte by users to give further incentive to be returning customers.
+
+The following user stories have been achieved from this section:
+
+* As a Site Admin I want to be able to approve or disapprove comments/reviews so that I can filter out objectionable comments
+* As a Site Admin I want to be able to create draft posts so that I can finish writing the content later
+* As a Site Admin I want to be able to create, read, update and delete posts/products so that I can manage my blog content
+* As a Site Admin I want to be able to provide a simple design so that users have an incentive to return back to the website
+* As a Site Admin I want to be able to protect the website so that only authorised users can make any changes
 
 
 ### Validation Testing <a name="validation-testing"></a>
@@ -538,6 +775,8 @@ This website was also tested on the following devices:
 * During testing it was identified that when a user has an item in the bag section that they are able to exceed the limit of 99 by manually typing a higher value within the input box. The form was also able to be submitted when the user had exceeded the maximum number of 99. Currently, the issue is left unresolved.
 
 * An additional issue identified with the bag section is that if enough quantity is added to reach at least a 7-figure sum in the total this results in an error 500 page being displayed to the user. Although it is very unlikely that the user would ever exceed such a sum, I have opted to create a custom error 500 page which would be displayed to the user in such a case so they are able to navigate back to the home page safely without having to exit the website completely due to the error.
+
+* During testing it was identified that when a post has been published and then it is edited and changed to 'Draft' and updated, this will result in a page 404 error as the the user is being re-directed back to the post detail page which no longer exists due to the post being changed to a draft. The actual action itself has gone through and the admin can access the draft post from the admin section. The solution was to add the custom 404 error page to allow the user to navigate back to the home page safely without having to exit the website completely.
 
 
 ## Deployment <a name="deployment"></a>
