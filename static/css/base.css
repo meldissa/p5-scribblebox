@@ -41,7 +41,7 @@ body {
 .shop-now-button {
     background: black;
     color: white;
-    min-width: 260px;
+    min-width: 250px;
 }
 
 .btn-black {
@@ -110,6 +110,10 @@ input[name='q']::placeholder {
 
 .main-display-text, .error-page {
     background-color: rgb(204, 174, 188);
+}
+
+.main-display-text {
+    min-width: 250px;
 }
 
 .main-display-text h1 {
