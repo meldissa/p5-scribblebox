@@ -107,11 +107,11 @@ def edit_post(request, slug, *args, **kwargs):
         form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated product!')
+            messages.success(request, 'Successfully updated post!')
             return redirect(reverse('post_detail', args=[slug]))
         else:
             messages.error(request,
-                           'Failed to update product. Please ensure the form '
+                           'Failed to update post. Please ensure the form '
                            'is valid.')
     else:
         form = PostForm(instance=post)
