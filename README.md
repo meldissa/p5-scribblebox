@@ -793,6 +793,11 @@ The following steps were followed to deploy this project:
 14. Scroll further down, select 'Enable Automatic Deploys' and then select 'Deploy Branch' to deploy project.
 15. After it has successfully deployed a 'view' button appears on screen and when clicked opens the deployed application.
 
+Please note as of 18/04/2022, Heroku no longer allows deployment from GitHub and is currently under maintenance. As a workaround the following method is used using the GitPod terminal to deploy any further changes to Heroku.
+
+* Run the command heroku login -i and login when prompted. Then run the following command: heroku git:remote -a your_app_name_here and replace your_app_name_here with the name of your Heroku app. This will link the app to your Gitpod terminal.
+* After linking your app to your workspace, you can then deploy new versions of the app by running the command git push heroku main and your app will be deployed to Heroku.
+
 
 ## Credits <a name="credits"></a>
 
