@@ -172,39 +172,30 @@ The database diagram was created using [dbdiagram.io](https://dbdiagram.io/home)
 
 The database contains the following models, three of which are custom models - Review, Contact and Post.
 
-__Order__:
-* Contains information about the order placed by the user, has a relationship with the OrderLineItem and UserProfile models.
+__Order__: Contains information about the order placed by the user, has a relationship with the OrderLineItem and UserProfile models.
 
-__OrderLineItem__:
-* Contains infromation about the an entry within an order, has a relationship with the Order and Product models.
+__OrderLineItem__: Contains infromation about the an entry within an order, has a relationship with the Order and Product models.
 
-__Category__:
-* Contains information on different product categories, feeds the category infromation to the Product mdoel.
+__Category__: Contains information on different product categories, feeds the category infromation to the Product mdoel.
 
-__Product__:
-* Contains information about the product, obtains category information from the Category model via ForeignKey.
+__Product__: Contains information about the product, obtains category information from the Category model via ForeignKey.
 
-__UserProfile__:
-* Contains information about the user, has a one to one relationship with the User model.
+__UserProfile__: Contains information about the user, has a one to one relationship with the User model.
 
-__User__:
-* Contains information about the user, this is a Django built-in model.
+__User__: Contains information about the user, this is a Django built-in model.
 
-__Review__:
-* Contains information about reviews submitted by the user, has a relationship with the Product model.
+__Review__: Contains information about reviews submitted by the user, has a relationship with the Product model.
 
-__Contact__:
-* Contains information about form submitted by a site visitor, has no external relationships with other models.
+__Contact__: Contains information about form submitted by a site visitor, has no external relationships with other models.
 
-__Post__:
-* Contains information about posts submitted by admin, has a relationship with the User model.
+__Post__: Contains information about posts submitted by admin, has a relationship with the User model.
 
 
 ## Features <a name="features"></a>
 
 ### Current Features <a name="current-features"></a>
 
-For this project I opted for a website with different pages accessed by clicking the nav links, this is fully responsive and consists of a header, footer and the following main sections; Home, Bag, Checkout, Contact, Events, Products, Profiles, Sign Up, Login and 404 page.
+For this project I opted for a website with different pages accessed by clicking the nav links, this is fully responsive and consists of a header, footer and the following main sections; Home, Bag, Checkout, Contact, Events, Products, Profiles, Sign Up, Login and 404/500 page.
 
 __Navigation__:
 
@@ -677,6 +668,7 @@ The following HTML files were tested:
 * includes/toasts/toast_success.html
 * includes/toasts/toast_warning.html
 
+Minor issues were detected which have been resolved now. Please note that there is an error appearing for the post detail page to indicate that the p tag is incomplete. However, upon further inspection the opening p tag is present. For some reason the HTML validator seems to throw out this error, this could potentially be due to content loading in between the p tags for the post detail using the summernote editor. Therefore, this does not seem to be a valid error.
 
 To test the CSS code, I used the __W3C CSS Validation Service__.
 
